@@ -1,34 +1,23 @@
 run:
-  skip-dirs:
-    - external
+  timeout: 5m
   skip-files:
     - generated.*
+
+issues:
+  new: true
 
 linters:
   enable:
     - bodyclose
-    - deadcode
     - depguard
-    - dogsled
-    - dupl
-    - errcheck
-    - exhaustive
-    - funlen
-    - gochecknoinits
-    - goconst
     - gocritic
-    - gocyclo
     - gofmt
     - goimports
     - golint
-    - gomnd
     - goprintffuncname
-    - gosec
     - gosimple
     - govet
     - ineffassign
-    - interfacer
-    - lll
     - misspell
     - nakedret
     - noctx
@@ -41,9 +30,9 @@ linters:
     - typecheck
     - unconvert
     - unparam
-    - unused
     - varcheck
     - whitespace
-
-issues:
-  new: true
+  disable:
+    - deadcode
+    - errcheck
+    - unused
